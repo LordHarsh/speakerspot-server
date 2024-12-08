@@ -7,6 +7,21 @@ This project is the backend server for the **SpeakerSpot** which is a platform t
 ## Postman Documentation
 Checkout the postman documentation here: https://documenter.getpostman.com/view/27245147/2sAYBd67u9
 
+## Screenshots
+#### Email to speaker for confirmation
+![image](https://github.com/user-attachments/assets/105f3e69-e52c-4a32-8675-dcfa74221f97)
+
+
+#### Email to user for confirmation
+![image](https://github.com/user-attachments/assets/6438115f-7a2c-4ad1-bea7-fb4d744068a3)
+
+#### Email for OTP
+![image](https://github.com/user-attachments/assets/4aec4325-3a04-4bdb-86f9-8d588e8ce63d)
+
+
+#### Google Calender automation
+![image](https://github.com/user-attachments/assets/7d8b5403-b66f-4f28-aa34-26fe9f394a2c)
+
 
 ## Tech Stack
 
@@ -16,6 +31,7 @@ Checkout the postman documentation here: https://documenter.getpostman.com/view/
 - **Sequelize**: Promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite, and Microsoft SQL Server.
 - **PostgreSQL**: Open-source relational database management system.
 - **AWS SES**: Amazon Simple Email Service for sending OTP emails.
+- **Google Calender API**: Google Calendar to create invite links for speaker and user.
 - **JWT**: JSON Web Token for authentication.
 - **Zod**: TypeScript-first schema declaration and validation library.
 - **Winston**: A logger for just about everything.
@@ -31,7 +47,7 @@ Checkout the postman documentation here: https://documenter.getpostman.com/view/
 
 ### Session Management
 
-- **Book Session**: Users can book a session with a speaker.
+- **Book Session**: Users can book a session with a speaker and send invites.
 - **Cancel Session**: Users can cancel a booked session.
 - **List User Sessions**: Users can view their booked sessions.
 - **List Available Speakers**: Users can view available speakers for a specific day and time.
