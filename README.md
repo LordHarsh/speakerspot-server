@@ -107,6 +107,7 @@ The project uses environment variables for configuration. Update the .env file w
 ```sh
 PORT=<number: 'Port Number'>
 POSTGRESQL_URI=<string: 'PostgreSQL Server Link'>
+POSTGRESQL_SSL=<string: 'PostgreSQL Server SSL Certificate'>
 NODE_ENV=<string: 'Node Environment'>
 JWT_SECRET=<string: 'JWT Secret'>
 AWS_REGION=<string: 'AWS Region'>
@@ -138,10 +139,10 @@ EMAIL_SENDER=<string: 'Email Sender'>
 
 
 ## Error Handling
-The project uses a centralized error handling middleware to handle errors gracefully. Errors are logged using Winston and appropriate error messages are sent to the client.
+The project uses a centralized error-handling middleware to handle errors gracefully. Errors are logged using Winston and appropriate error messages are sent to the client.
 
 ## Logging
 The project uses Winston for logging. Logs are printed to the console in development mode and can be configured to be stored in files or other transports in production.
 
 ## License
-This project is licensed under the ISC License.
+This project is licensed under the  GNU AFFERO GENERAL PUBLIC LICENSE Version 3.
