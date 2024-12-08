@@ -4,8 +4,12 @@
 
 This project is the backend server for the **SpeakerSpot** which is a platform to connect expert speaker to users. It is built using Express and TypeScript, and it leverages various technologies and libraries to provide a robust and scalable solution.
 
-## Postman Documentation
+## Links
+#### Postman Documentation
 Checkout the postman documentation here: https://documenter.getpostman.com/view/27245147/2sAYBd67u9
+
+#### Render Deployment
+Try the deployed version of service at: https://speakerspot-server-qsdp.onrender.com
 
 ## Screenshots
 #### Email to speaker for confirmation
