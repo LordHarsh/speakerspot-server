@@ -12,6 +12,8 @@ const envSchema = z.object({
   AWS_REGION: z.string(),
   AWS_ACCESS_KEY_ID: z.string(),
   AWS_SECRET_ACCESS_KEY: z.string(),
+  GOOGLE_SERVICE_ACCOUNT_EMAIL: z.string(),
+  GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY: z.string(),
   EMAIL_SENDER: z.string(),
 });
 
@@ -30,6 +32,12 @@ export default {
     prefix: '/api',
   },
   jwtSecret: process.env.JWT_SECRET || 'jwtsecret',
+  google: {
+    GOOGLE_SERVICE_ACCOUNT_EMAIL:
+      process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL || '',
+    GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY:
+      process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY || '',
+  },
   AWS: {
     AWS_REGION: process.env.AWS_REGION || 'ap-south-1',
     AWS_ACCESS_KEY_ID: process.env.AWS_ACCESS_KEY_ID || '',

@@ -1,9 +1,11 @@
 import { Op, where } from 'sequelize';
+import { BookingNotificationService } from '../../shared/bookingEmail';
 import { ERRORS } from '../../shared/errors';
 import { getModel } from '../../shared/models';
 import { Session } from '../../shared/models/session';
 import { Speaker } from '../../shared/models/speaker';
 import { SpeakerProfile } from '../../shared/models/speakerProfile';
+import { User } from '../../shared/models/user';
 import type { Availability } from '../speaker/speaker.schema';
 
 export async function bookSessionHandler(
@@ -85,7 +87,20 @@ export async function bookSessionHandler(
     return avail;
   });
   await speakerProfile.update({ availability: updatedAvailability });
-
+  const speaker = await Speaker.findByPk(speakerProfile.speakerId);
+  const user = await User.findByPk(userId);
+  if (!speaker || !user) {
+    throw {
+      statusCode: ERRORS.USER_NOT_FOUND.code,
+      message: ERRORS.USER_NOT_FOUND.message.error_description,
+    };
+  }
+  const booking = new BookingNotificationService();
+  const calenderId = await booking.processBookingNotification({
+    user,
+    speaker,
+    session,
+  });
   return session;
 }
 

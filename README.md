@@ -129,6 +129,8 @@ JWT_SECRET=<string: 'JWT Secret'>
 AWS_REGION=<string: 'AWS Region'>
 AWS_ACCESS_KEY_ID=<string: 'AWS Access Key ID'>
 AWS_SECRET_ACCESS_KEY=<string: 'AWS Secret Access Key'>
+GOOGLE_SERVICE_ACCOUNT_EMAIL=<string: 'Google Service Account Email'>
+GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY=<string: 'Google Service Account Private Key'>
 EMAIL_SENDER=<string: 'Email Sender'>
 ```
 

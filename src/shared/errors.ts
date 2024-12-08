@@ -105,4 +105,12 @@ export const ERRORS = {
       error_description: 'Session not found',
     },
   },
+  USER_NOT_FOUND: {
+    code: 404,
+    success: false,
+    message: {
+      error: 'USER_NOT_FOUND',
+      error_description: 'User not found',
+    },
+  },
 };
