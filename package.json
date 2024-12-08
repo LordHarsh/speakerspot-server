@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "echo": "echo \"Error: no test specified && exit 1\"",
-    "build": "biome check ./src && tsc --build",
+    "build": "tsc --build",
     "format": "biome check --write --unsafe .",
     "lint": "biome check .",
     "start": "node ./build/index.js",
